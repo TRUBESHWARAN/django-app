@@ -1,0 +1,10 @@
+{%extends 'home.html'%}
+
+{%block content%}
+<form method="post">
+    {%csrf_token%}
+    {{myform.as_p}}
+    <input type="submit" value="UPDATE" class="btn btn-primary">
+</form>
+
+{%endblock%}

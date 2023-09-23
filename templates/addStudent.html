@@ -1,0 +1,14 @@
+{%extends 'home.html'%}
+
+{%block content%}
+    <div class="container">
+        <h2>ADD STUDENT DATA</h2>
+        <form method="post">
+            <table>
+            {%csrf_token%}
+            {{form.as_table}}
+            </table>
+            <input type="submit" value="ADD" class="btn btn-success">
+        </form>
+    </div>
+{%endblock%}

@@ -1,0 +1,15 @@
+{%extends 'home.html'%}
+{%block title%}
+<title>Courses</title>
+{%endblock%}
+{%block content%}
+
+  <h2>Courses in Livewire</h2>
+
+  <ul>
+    {%for a in cor%}
+    <li>{{a}}</li>
+    {%endfor%}
+  </ul>
+
+{%endblock%}

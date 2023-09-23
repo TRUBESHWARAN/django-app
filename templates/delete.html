@@ -1,0 +1,10 @@
+{%extends 'home.html'%}
+
+{%block content%}
+<p>Are you sure want to delete the data of {{data.name}}?</p>
+<form method="post">
+  {%csrf_token%}
+  <input type="submit" value="YES" class="btn btn-success">
+  <a href="/enquiries" class="btn btn-danger">No</a>
+</form>
+{%endblock%}

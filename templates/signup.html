@@ -1,0 +1,10 @@
+{%extends 'home.html'%}
+
+{%block content%}
+<h3>SIGNUP FORM</h3>
+<form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="REGISTER" class="btn btn-info">
+</form>
+{%endblock%}

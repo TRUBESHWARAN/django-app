@@ -1,0 +1,30 @@
+{%extends 'home.html'%}
+
+{%block content%}
+  <table border="" width="100%" class="table-success">
+    <tr>
+      <th>Student Id</th>
+      <th>Student Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>CourseName</th>
+      <th>CourseFees</th>
+      <th>Address</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    {%for a in data%}
+    <tr>
+      <td>{{a.student_id}}</td>
+      <td>{{a.name}}</td>
+      <td>{{a.email}}</td>
+      <td>{{a.phone}}</td>
+      <td>{{a.course_name}}</td>
+      <td>{{a.course_fee}}</td>
+      <td>{{a.address}}</td>
+      <td><a href="edit/{{a.student_id}}" >Edit</a></td>
+      <td><a href="delete/{{a.student_id}}">Delete</a></td>
+    </tr>
+    {%endfor%}
+  </table>
+{%endblock%}
